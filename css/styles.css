@@ -1,0 +1,238 @@
+/* Reset some defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+}
+
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 15px 30px;
+    background-color:white;
+   
+}
+/* Logo container */
+.logo-container {
+    display: flex;
+    margin-left: 20px;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 20px;
+   
+}
+
+.logo-container .logo {
+    width: 100px;  /* Adjust size as needed */
+    height: auto;
+    mix-blend-mode: multiply;
+    align-items: center;
+
+}
+
+/*.logo-container .logo-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+}
+*/
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+ 
+}
+
+header .button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: left;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+nav ul li {
+    display: flex;
+    
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #C49D29;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f4a261;
+    
+}
+.hero-top {
+    background-color: #C49D29;
+    height: 30px;
+    
+}
+.hero-top p {
+    color: #fff;
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+    padding: 5px 0;
+}
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    width: 100%;
+    color: black;
+    position: relative;  /* use relative instead of absolute */
+    height: 100vh; /* Full viewport height */
+    background-image: url('../images/hero.jpg'); /* replace with your image */
+    background-size: cover;   /* make it cover full area */
+    background-position: center; /* center the image */
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    background-color: black;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 0px;
+}
+
+.hero .btn {
+    background-color:#C49D29;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 200vh; /* 50% of viewport height */
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+}
+
+
+
+
+/* Products Section */
+.products {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.product-card .btn {
+    background-color: #C49D29;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-card .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #C49D29;
+    color: white;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+.social-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+.social-links a img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+.social-links a:hover {
+    opacity: 0.4;
+}

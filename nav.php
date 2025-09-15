@@ -5,6 +5,8 @@
         </div>
 
          <nav>
+           
+
             <div class="user-menu">
                 <ul>
                     <li><a href="index.php">HOME</a></li>
@@ -13,9 +15,21 @@
                     <li><a href="#">ACCESSORIES</a></li>
                     <li><a href="#">ABOUT US</a></li>
                     <li><a href="contact_us.php">CONTACT US</a></li>
-                    <li><a href="#">SIGN UP</a></li>
+                    <li><a href="register.php">SIGN UP</a></li>
                     <li><a href="login.php">LOGIN</a></li>
                     <li><a href="#">CART(0)</a></li>
                 </ul>
             </div>
+        
+
         </nav>
+        <script>    
+            const currentLocation = window.location.pathname.split("/").pop();
+            const menuItems = document.querySelectorAll(".user-menu ul a");
+
+            menuItems.forEach(link => {
+                if(link.getAttribute("href") === currentLocation){
+                link.classList.add("active");
+                }
+            });
+        </script>

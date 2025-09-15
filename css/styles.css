@@ -19,6 +19,7 @@ header {
     background-color:white;
    
 }
+
 /* Logo container */
 .logo-container {
     display: flex;
@@ -56,11 +57,18 @@ header .button-container{
     margin-top: 10px;
     align-items: left;
 }
+
+.user-menu ul a.active {
+
+  color: #f4a261;
+  border-radius: 2px;
+  font-weight: bold;
+}
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 nav ul li {
@@ -161,6 +169,7 @@ header nav ul li a:hover {
 }
 
 .products h2 {
+    color: #C49D29;
     font-size: 2.5em;
     margin-bottom: 40px;
 }
@@ -356,4 +365,108 @@ footer {
 .signup-link a:hover {
     color: #f4a261;
 
+}
+
+/*Contact Form Section*/
+
+.contact-form {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #C49D29;
+    font-size: 28px;
+}
+
+.contact-form textarea{
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical; /* allow vertical resizing only */
+
+}
+
+/* Button styles */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #C49D29;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #f4a261;
+}
+
+/* Container for the submission message */
+.submit-container {
+    display: flex;
+    justify-content: center;       /* Center horizontally */
+    align-items: center;           /* Center vertically */
+    height: 100vh;                  /* Almost full viewport height */
+    background-color: #f9f9f9;     /* Light background */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Inner content box */
+.submit-info {
+    text-align: center;
+    background-color: #fff;        /* White card */
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);  /* Soft shadow */
+    max-width: 500px;
+}
+
+/* Headings */
+.submit-info h2 {
+    color: #C49D29;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.submit-info h3 {
+    color: #3E2C1C;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Paragraph text */
+.submit-info p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Button style */
+.submit-info .button {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: #C49D29;     /* Dark background */
+    color: #fff;                /* White text */
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.submit-info .button:hover {
+    background-color: #f4a261;     /* Lighter on hover */
 }

@@ -12,7 +12,7 @@
                     <li><a href="index.php">HOME</a></li>
                     <li><a href="product.php">SHOP PRODUCT</a></li>
                     <li><a href="#">ACCESSORIES</a></li>
-                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="about.php/Applications/MAMP/htdocs/project_ClothingStore/images/about.jpg">ABOUT US</a></li>
                     <li><a href="contact_us.php">CONTACT US</a></li>
                     <li><a href="register.php">SIGN UP</a></li>
                     <li><a href="login.php">LOGIN</a></li>

@@ -484,3 +484,63 @@ footer {
 .submit-info .button:hover {
     background-color: #f4a261;     /* Lighter on hover */
 }
+
+
+
+
+/* Hero for About page */
+.about-hero {
+    background-image: url("../images/about.jpg"); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* About Section */
+.about-content {
+    text-align: center;
+    background-color: rgba(196, 157, 41, 0.5); /* gold with 50% opacity */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.2em  ;
+}
+
+
+.about {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2em;
+    color: #C49D29;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-list li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #333;
+    text-align: center;
+}

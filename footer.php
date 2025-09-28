@@ -13,7 +13,7 @@
       
         <a href="#">Home</a>  |
         <a href="#">Shop</a>  |
-        <a href="#">About</a> |
+        <a href="#">About Us</a> |
         <a href="#">Contact</a>
       
     </div>

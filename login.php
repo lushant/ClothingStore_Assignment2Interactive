@@ -1,61 +1,57 @@
+
 <?php
 session_start();
-include 'db_connect.php';
-
-$message = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = trim($_POST["email"]);
-    $password = $_POST["password"];
-
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows === 1) {
-        $user = $result->fetch_assoc();
-        if (password_verify($password, $user["password"])) {
-            $_SESSION['user_id'] = $user["user_id"];
-            $_SESSION['user_name'] = $user["name"];
-            header("Location: index.php");
-            exit;
-        } else {
-            $message = "Invalid password!";
-        }
-    } else {
-        $message = "No account found with that email!";
-    }
-}
+$error = $_SESSION['login_error'] ?? '';
+unset($_SESSION['login_error']); // remove it after showing
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Clothing Store</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 <body>
 
 <header>
-    <div class="logo">My Clothing Store</div>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="register.php">Register</a>
-        <a href="login.php">Login</a>
-    </nav>
+ <?php include 'nav.php'; ?>
 </header>
 
-<section class="form-section">
-    <h2>Login</h2>
-    <?php if ($message) echo "<p style='color:red;'>$message</p>"; ?>
-    <form method="POST">
-        <input type="email" name="email" placeholder="Email Address" required><br>
-        <input type="password" name="password" placeholder="Password" required><br>
-        <button type="submit">Login</button>
-    </form>
-</section>
+<?php include   'header.php';  ?>
 
+<section class="form-section">
+<div class="login-container">
+  <form class="login-form" method = "POST" action = "loginUser.php" id = "login-form">
+    <h2>Login</h2>
+    <div class="input-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+    </div>
+    <button type="submit">Login</button>
+    <p class="signup-link">Don't have an account? <a href="register.php">Sign Up</a></p>
+  </form>
+
+
+<?php if($error): ?>
+  <script>
+      alert('<?php echo $error; ?>');
+  </script>
+<?php endif; ?>
+</div>
+
+
+
+</section>
+<footer>
+    <?php include 'footer.php'; ?>
+</footer>
 </body>
 </html>

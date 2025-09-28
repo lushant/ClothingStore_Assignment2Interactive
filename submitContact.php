@@ -12,7 +12,7 @@
         <br> We appreciate you contacting us. 
         <br>We will get back to you soon! 
         </p>
-        <h3>Have a great day!</h3>
+        <h3>Enjoy Browsing!</h3>
         <a href="index.php" class = "button">Return To Home</a>
        
      </div>
@@ -40,16 +40,16 @@
 
         // Execute
         if ($stmt->execute()) {
-            echo "Message submitted successfully!";
+            echo "<script>alert('Message Sent Successfully!'); window.location='submitContact.php';</script>";
         } else {
-            echo "Error: " . $stmt->error;
+            echo "<script>alert('Error: Unable to send message.'); window.history.back();</script>";
         }
 
         // Close connections
         $stmt->close();
         $conn->close();
     }
-
+    
 	?>
 </body>
 </html>

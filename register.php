@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Clothing Store</title>
+    <title>Sign Up - Clothing Store</title>
     <link rel="stylesheet" href="css/styles.css">
     
 </head>
@@ -17,28 +17,34 @@
 
 <section class="form-section">
 <div class="login-container">
-  <form class="login-form">
+  <form class="login-form" method = "POST" action = "registerUser.php" id = "register-form" onsubmit="return validateForm()">
     <h2>Sign Up</h2>
     <div class="input-group">
-      <label for="firstname">First Name</label>
-      <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+      <label for="username">User Name</label>
+      <input type="text" id="username" name="username" placeholder="Enter username">
+      <p id="usernameError" class="error"></p>
     </div>
-    <div class="input-group">
-      <label for="lastname">Last Name</label>
-      <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
-    </div>
+
     <div class="input-group">
       <label for="email">Email</label>
-      <input type="text" id="email" name="email" placeholder="Enter your email" required>
+      <input type="email" id="email" name="email" placeholder="Enter email">
+      <p id="emailError" class="error"></p>
     </div>
     <div class="input-group">
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      <input type="password" id="password" name="password" placeholder="Enter password">
+
+    </div>
+      <div class="input-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password">
+      <p id="passwordError" class="error"></p>
     </div>
     <button type="submit">Sign Up</button>
     <p class="signup-link">Already have an account? <a href="login.php">Login</a></p>
   </form>
 </div>
+<script src ="js/validate.js"></script>
 
 </section>
 <footer>

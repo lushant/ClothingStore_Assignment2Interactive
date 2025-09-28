@@ -1,3 +1,8 @@
+    <?php
+    if (session_status() === PHP_SESSION_NONE ) {
+        session_start();
+    }
+    ?>  
         <div class="logo-container">
             <a href="index.php">
                 <img src="images\logo.png" width="90" height="70" alt="Clothing Store Logo" class="logo">
@@ -9,14 +14,36 @@
 
             <div class="user-menu">
                 <ul>
-                    <li><a href="index.php">HOME</a></li>
+
+                    <li><a href="<?php echo isset($_SESSION['user_id']) ? 'customerDashboard.php' : 'index.php'; ?>">
+                    <?php echo isset($_SESSION['user_id']) ? 'DASHBOARD' : 'HOME'; ?>
+                    </a></li>
+                
+
                     <li><a href="product.php">SHOP PRODUCT</a></li>
-                    <li><a href="#">ACCESSORIES</a></li>
-                    <li><a href="about.php/Applications/MAMP/htdocs/project_ClothingStore/images/about.jpg">ABOUT US</a></li>
+                    <li><a href="about.php">ABOUT US</a></li>
                     <li><a href="contact_us.php">CONTACT US</a></li>
                     <li><a href="register.php">SIGN UP</a></li>
-                    <li><a href="login.php">LOGIN</a></li>
-                    <li><a href="#">CART(0)</a></li>
+                   
+                    <?php if (isset($_SESSION['user_id'])): ?>
+                        <li><a href="logout.php">LOG OUT (<?php echo htmlspecialchars($_SESSION['username']); ?>)</a></li>
+                        <?php else: ?>
+                        <li><a href="login.php">LOG IN</a></li>
+                        <?php endif; ?>
+            
+                   
+                    <li class="cart-menu">
+                        <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
+                        <div id="cartDropdown" class="cart-dropdown">
+                            <h4>Your Cart</h4>
+                            <div id="cartItemsDropdown"></div>
+                            <div class="cart-total">Total: $<span id="cartTotalDropdown">0.00</span></div>
+                            <button id="checkoutDropdown">Reserve Items</button>
+                        </div>
+                    </li>
+
+
+                   
                 </ul>
             </div>
         

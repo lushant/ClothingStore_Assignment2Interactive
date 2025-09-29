@@ -20,7 +20,7 @@
 <!-- Hero Section -->
     <section class="hero about-hero">
         <div class="about-content">
-            <h1>About Us</h1>
+            <h1>About Us - Clothing Store </h1>
             <p>Learn more about our story, our mission, and what makes us unique.</p>
         </div>
     </section>
@@ -33,6 +33,8 @@
                 Welcome to <strong>The Clothing Store</strong>, where fashion meets affordability. 
                 We are passionate about offering stylish, high-quality clothing for men, women, and kids. 
                 Our goal is to provide timeless fashion essentials while keeping up with the latest trends.
+
+                You can find us at <a href = "https://maps.app.goo.gl/tUZFxX3LFV6ANmjt9">Level 1/15 Moore St, Canberra ACT 2601 </a>
             </p>
 
             <h2>Our Mission</h2>

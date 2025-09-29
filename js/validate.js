@@ -1,7 +1,12 @@
+// js/validate.js
+// Client-side form validation for registration/login forms
+// Validates username, password, and email fields
 function validatePassword() {
-    let password = document.getElementById("password").value;
-    let confirmPassword = document.getElementById("confirmPassword").value;
-    let error = "";
+    let password = document.getElementById("password").value; // Get the password value
+    let confirmPassword = document.getElementById("confirmPassword").value; // Get the confirm password value
+    let error = ""; // Initialize error message
+
+    // Password validation criteria checks
 
     if (password.length < 8) {
         error = "Password must be at least 8 characters long.";
@@ -12,7 +17,7 @@ function validatePassword() {
     } else if (!/[0-9]/.test(password)) {
         error = "Password must contain at least one number.";
     } else if (!/[@$!%*?&]/.test(password)) {
-        error = "Password must contain at least one special character (@, $, !, %, *, ?, &).";
+        error = "Password must contain at least one special character (@, $, !, %, *, ?, &)."; 
     } else if (password !== confirmPassword) {
         error = "Passwords do not match.";
     }
@@ -20,7 +25,7 @@ function validatePassword() {
     document.getElementById("passwordError").innerText = error;
     return error === ""; // true if valid
 }
-
+// Email validation using regex
 function emailValidation() {
     let email = document.getElementById("email").value;
     let error = "";
@@ -33,7 +38,7 @@ function emailValidation() {
     document.getElementById("emailError").innerText = error;
     return error === "";
 }
-
+// Username validation: 5-15 chars, letters and numbers only
 function userNameValidation() {
     let username = document.getElementById("username").value;
     let error = "";
@@ -47,7 +52,7 @@ function userNameValidation() {
     document.getElementById("usernameError").innerText = error;
     return error === "";
 }
-
+// Main validation function called on form submission
 function validateForm() {
     let validUsername = userNameValidation();
     let validPassword = validatePassword();

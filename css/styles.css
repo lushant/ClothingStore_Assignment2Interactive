@@ -183,6 +183,13 @@ header nav ul li a:hover {
     font-size: 2.5em;
     margin-bottom: 40px;
 }
+.products p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
 
 .product-grid {
     display: grid;

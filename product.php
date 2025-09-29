@@ -12,6 +12,7 @@
     <!-- Header -->
     <header>
         <?php include 'nav.php'; ?>
+
     </header>
 
   <?php include 'header.php'; ?>
@@ -19,6 +20,12 @@
     <!-- Featured Products -->
     <section class="products">
         <h2>Shop Our Products</h2>
+            <p><strong>Available Sizing:</strong> We proudly offer a complete size range from XS up to XL.
+            <br>To ensure the absolute perfect fit for your garment, please visit in-store for a professional fitting and precise size check. 
+            <br><br>Our tailoring experts are ready to assist you!
+
+            You can find us at <a href = "https://maps.app.goo.gl/tUZFxX3LFV6ANmjt9">Level 1/15 Moore St, Canberra ACT 2601 </a>
+        </p>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="images/coat1.jpg" alt="Product 1">

@@ -30,9 +30,9 @@
         <div class="container">
             <h2>Who We Are</h2>
             <p>
-                Welcome to <strong>The Clothing Store</strong>, where fashion meets affordability. 
-                We are passionate about offering stylish, high-quality clothing for men, women, and kids. 
-                Our goal is to provide timeless fashion essentials while keeping up with the latest trends.
+                Welcome to <strong>The Clothing Store</strong>,
+                We are dedicated to the art of bespoke tailoring, offering fully customized garments for discerning men and women. 
+                Our mission is to combine traditional craftsmanship with your unique vision, ensuring every piece is of the highest quality, fits flawlessly, and reflects your style.
 
                 You can find us at <a href = "https://maps.app.goo.gl/tUZFxX3LFV6ANmjt9">Level 1/15 Moore St, Canberra ACT 2601 </a>
             </p>

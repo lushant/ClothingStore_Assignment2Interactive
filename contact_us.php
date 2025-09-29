@@ -38,8 +38,9 @@
      </form>
 
      <script>
+      // Client-side validation for contact form
       const form = document.getElementById("contact-form");
-
+    // Validate email format on form submission
       form.addEventListener("submit", function(event) {
           const email = document.getElementById("email").value.trim();
           

@@ -40,8 +40,13 @@ unset($_SESSION['login_error']); // remove it after showing
   </form>
 
 
-<?php if($error): ?>
+<?php 
+// Show error message if exists
+if($error): 
+
+?>
   <script>
+    // Simple alert for error message
       alert('<?php echo $error; ?>');
   </script>
 <?php endif; ?>

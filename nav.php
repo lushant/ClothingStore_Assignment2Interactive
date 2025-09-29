@@ -14,6 +14,7 @@
 
             <div class="user-menu">
                 <ul>
+                    <!--Dynamic link for Dashboard or Home based on login status -->
 
                     <li><a href="<?php echo isset($_SESSION['user_id']) ? 'customerDashboard.php' : 'index.php'; ?>">
                     <?php echo isset($_SESSION['user_id']) ? 'DASHBOARD' : 'HOME'; ?>
@@ -24,16 +25,20 @@
                     <li><a href="about.php">ABOUT US</a></li>
                     <li><a href="contact_us.php">CONTACT US</a></li>
                     <li><a href="register.php">SIGN UP</a></li>
-                   
-                    <?php if (isset($_SESSION['user_id'])): ?>
+                   <!-- Dynamic Log In/Log Out link based on login status -->
+                    <?php 
+                    // Check if user is logged in and display appropriate link 
+                    // If logged in, show Log Out with username; else show Log In
+                    if (isset($_SESSION['user_id'])): ?>
                         <li><a href="logout.php">LOG OUT (<?php echo htmlspecialchars($_SESSION['username']); ?>)</a></li>
                         <?php else: ?>
                         <li><a href="login.php">LOG IN</a></li>
                         <?php endif; ?>
             
-                   
+                    <!-- Cart link with dynamic item count -->
                     <li class="cart-menu">
-                        <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
+                        <a href="#" id="cartLink">CART (<span id="cartCount">0</span>)</a>
+
                         <div id="cartDropdown" class="cart-dropdown">
                             <h4>Your Cart</h4>
                             <div id="cartItemsDropdown"></div>
@@ -41,15 +46,15 @@
                             <button id="checkoutDropdown">Reserve Items</button>
                         </div>
                     </li>
-
-
-                   
                 </ul>
             </div>
         
 
         </nav>
-        <script>    
+        <script src ="js/script.js"></script>
+
+        <script>   
+
         // Highlight active page in navigation
         // Get current path and filename
             const currentLocation = window.location.pathname.split("/").pop();

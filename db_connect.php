@@ -2,6 +2,7 @@
 $host = "localhost"; // Default MAMP host
 $user = "root"; // Default MAMP user
 $password = "root"; // Default MAMP password .. Needs to be empty for WAMP
+//$password = ""; // Uncomment this and Comment the Default MAMP when using WAMP server 
 $dbname = "clothing_store";
 
 #Create connection

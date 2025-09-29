@@ -11,19 +11,19 @@
     <div class="footer-section">
       <h3>Quick Links</h3>
       
-        <a href="#">Home</a>  |
-        <a href="#">Shop</a>  |
-        <a href="#">About Us</a> |
-        <a href="#">Contact</a>
+        <a href="index.php">Home</a>  |
+        <a href="product.php">Shop</a>  |
+        <a href="about.php">About Us</a> |
+        <a href="contact_us.php">Contact</a>
       
     </div>
     <br>
     <div class="social-links">
       <h3>Follow Us</h3>
       <br>
-        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://x.com"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a>
       
     </div>
   </div>

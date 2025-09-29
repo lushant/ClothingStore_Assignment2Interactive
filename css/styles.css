@@ -28,6 +28,7 @@ header {
     padding: 15px 30px;
     background-color:white;
     position: relative;
+    z-index: 10;
     
    
 }
@@ -145,7 +146,7 @@ header nav ul li a:hover {
     margin-bottom: 0px;
 }
 
-.hero .btn {
+.hero .shopBtn {
     background-color:#C49D29;
     color: white;
     padding: 15px 30px;
@@ -154,7 +155,7 @@ header nav ul li a:hover {
     transition: background 0.3s;
 }
 
-.hero .btn:hover {
+.hero .shopBtn:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px rgba(0,0,0,0.2);
 }
@@ -170,9 +171,6 @@ header nav ul li a:hover {
     z-index: -1;
 
 }
-
-
-
 
 /* Products Section */
 .products {
@@ -544,3 +542,199 @@ footer {
     color: #333;
     text-align: center;
 }
+
+
+/* Dashboard Container */
+.dashboard-section {
+  padding: 50px 20px;
+  background: #f9f9f9;
+  min-height: 30vh;
+}
+
+.dashboard-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Welcome Heading */
+.dashboard-section h1 {
+  font-size: 34px;
+  color: #C49D29; /* Golden */
+  margin-bottom: 10px;
+}
+
+.dashboard-section h2 {
+  font-size: 22px;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* Reservation Table */
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.reservation-table th,
+.reservation-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.reservation-table th {
+  background: #C49D29; /* Golden */
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.reservation-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.reservation-table tr:hover {
+  background: #e8d389;
+  color: #000;
+}
+
+/* No Data Message */
+.no-data {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+}
+
+/* Logout Button */
+.button.logout {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: #C49D29;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  
+}
+
+.button.logout:hover {
+  background: #a07c1f;
+}
+
+/* Cart Dropdown Styles */
+.cart-menu {
+    position: relative;
+    display: inline-block;
+}
+
+#cartDropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 300px;
+    background-color: #fff; /* match index.php header style */
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 8px;
+    padding: 10px;
+    
+}
+
+#cartDropdown h4 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    text-align: center;
+    color: #333; /* same as index headings */
+}
+#cartDropdown.visible {
+    display: block;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+
+}
+
+.cart-item input[type="number"] {
+    width: 50px;
+    padding: 2px 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+.cart-total {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #222; /* match main text color */
+}
+
+#checkoutDropdown {
+    width: 100%;
+    padding: 8px 0;
+    margin-top: 10px;
+    background-color: #C49D29; /* gold color as in index.php buttons */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#checkoutDropdown:hover {
+    background-color: #b38c27;
+}
+
+/* Adjust cart count */
+#cartCount {
+    font-weight: bold;
+    color: #C49D29; /* golden color to match index.php */
+}
+
+.reserveBtn {
+    background-color: #C49D29;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.reserveBtn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}   
+

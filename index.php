@@ -21,7 +21,7 @@
         <div class="hero-content">
             <h1></h1>
             <p></p>
-            <a href="#" class="btn">Shop Now</a>
+            <a href="product.php" class="shopBtn">Shop Now</a>
         </div>
     </section>
 
@@ -30,22 +30,31 @@
         <h2>Featured Products</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="images/product1.jpg" alt="Product 1">
-                    <h3>Classic T-Shirt</h3>
-                    <p>$29.99</p>
-                    <a href="#" class="btn">Add to Cart</a>
-                </div>
-                <div class="product-card">
-                    <img src="images/product2.jpg" alt="Product 2">
-                    <h3>Denim Jacket</h3>
+                    <img src="images/coat1.jpg" alt="Product 1">
+                    <h3>Fleece Coat</h3>
                     <p>$59.99</p>
-                    <a href="#" class="btn">Add to Cart</a>
+                    <a href="#" class="reserveBtn"
+                            data-name= "Fleece Coat"
+                            data-price= "59.99"
+                            data-loggedin="<?php echo isset($_SESSION['user_id']) ? 'yes' : 'no'; ?>">Add to Reserve</a>
                 </div>
                 <div class="product-card">
-                    <img src="images/product3.jpg" alt="Product 3">
-                    <h3>Summer Dress</h3>
+                    <img src="images/coat3.jpg" alt="Product 3">
+                    <h3>Tech Jacket</h3>
                     <p>$49.99</p>
-                    <a href="#" class="btn">Add to Cart</a>
+                    <a href="#" class="reserveBtn"
+                            data-name= "Tech Jacket"
+                            data-price= "49.99"
+                            data-loggedin="<?php echo isset($_SESSION['user_id']) ? 'yes' : 'no'; ?>">Add to Reserve</a>
+                </div>
+                <div class="product-card">
+                    <img src="images/sweat2.jpg" alt="Product 9">
+                    <h3>Knit Cardigan</h3>
+                    <p>$69.99</p>
+                    <a href="#" class="reserveBtn"
+                            data-name= "Knit Cardigan"
+                            data-price= "69.99"
+                            data-loggedin="<?php echo isset($_SESSION['user_id']) ? 'yes' : 'no'; ?>">Add to Reserve</a>
                 </div>
             </div>
     </section>

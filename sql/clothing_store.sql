@@ -1,16 +1,8 @@
+/* SQL script to create the database and tables for the clothing store application */
 CREATE DATABASE clothing_store;
-
+/* Use the database */
 USE clothing_store;
-
-CREATE TABLE products (
-    product_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    price DECIMAL(10,2),
-    category VARCHAR(50),
-    stock INT,
-    image VARCHAR(255)
-);
-
+/* Create users table */
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -19,16 +11,18 @@ CREATE TABLE users (
     role ENUM('customer','admin') DEFAULT 'customer',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+/* Create reservations table */
 CREATE TABLE reservations (
     reservation_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
-    product_id INT NOT NULL,
+    product_name VARCHAR(255) NOT NULL,
     quantity INT NOT NULL DEFAULT 1,
+    price DECIMAL(10,2) NOT NULL,
     reservation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    status ENUM('reserved','picked_up','cancelled') DEFAULT 'reserved',
-    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
-    FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE
+    status ENUM('pending', 'completed') DEFAULT 'pending',
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+/* Create messages table */
 CREATE TABLE messages (
     message_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
